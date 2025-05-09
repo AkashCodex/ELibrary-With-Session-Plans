@@ -37,23 +37,25 @@ You're working on a digital library project. Your task is to display books on th
 
 ## 🗺️ 5. Mini Visual Roadmap
 
-[ Book Data (Title, Author) ] 
+  Book Data (Title, Author)
         |
-     [ Props ]
+     Props 
         |
-  [ <Book /> Component ]
+    <Book />
         |
-  [ Rendered on Web Page ]
+   Rendered on Web Page 
 
 
-## 📚 6. Conceptual Explanation (Notes + Code Walkthrough)
+## 📚 6. Conceptual Explanation 
 🔹 What is React?
 A JavaScript library for building interactive user interfaces.
 
 🔹 Key Concepts:
 ✅ JSX – JavaScript + XML
 Allows you to write HTML-like syntax directly in JS files.
-const element = <h1>Hello, React!</h1>;
+
+const element = <h1> Hello React! </h1>;
+
 
 ✅ Components
 Function Component:
