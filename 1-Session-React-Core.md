@@ -45,41 +45,39 @@ You're working on a digital library project. Your task is to display books on th
         |
    Rendered on Web Page 
 
-
 ## 📚 6. Conceptual Explanation
-🔹 **What is React?**  
+🔹 What is React?
 A JavaScript library for building interactive user interfaces using a component-based architecture and a virtual DOM for efficient updates.
 
-✅ JSX – JavaScript + XML  
+✅ JSX – JavaScript + XML
 JSX allows you to write HTML-like syntax directly inside JavaScript files.
 
 const element = <h1>Hello React!</h1>;
 
 ✅ Components
 Components are reusable pieces of UI in React.
-functional and class components 
+
+Functional Component:
 
 function Welcome() {
   return <h1>Hello, World!</h1>;
 }
-
+Class Component:
 class Welcome extends React.Component {
   render() {
     return <h1>Hello, World!</h1>;
   }
 }
-
 ✅ Virtual DOM vs Real DOM
 React uses a virtual DOM, a lightweight copy of the real DOM. It allows React to update only the parts of the page that changed, improving performance.
 
 ✅ Component Tree
-React apps are structured in a tree of nested components
-
+React apps are structured in a tree of nested components.
 App
  └── BookList
       └── Book
-
 ## 🛠️ 7. Hands-On Implementation (Integration in Main Project)
+
 📁 Folder Structure
 
 e-library/
@@ -91,11 +89,17 @@ e-library/
 │   │   ├── Home.jsx
 │   │   └── ManageBook.jsx
 │   └── index.css
-
 📄 main.jsx
+The entry point for the application, where React renders the main app component.
+
 📄 App.jsx
-📄 ManageBook.jsx
+Contains the routing and layout structure for the app. It connects different pages (like Home and ManageBook).
+
 📄 Home.jsx
+The Home page component where users can see the list of books.
+
+📄 ManageBook.jsx
+This component provides functionality to manage books (add, update, delete).
 
 ## 8. Output-Based Assessment
 ✅ Expected Outputs:
@@ -121,16 +125,13 @@ A: JSX is a syntax extension that looks like HTML but compiles to JavaScript. It
 Q: What is the difference between functional and class components?
 A: Functional components are simpler and support hooks. Class components use lifecycle methods and this.
 
+Example for Greet Component:
+
 function Greet(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
-<Greet name="Alice" />
-
-
 ## 10. Connection to the Next Problem Statement
-Next Topic: React State and Event Handling
-
+Topic: React State and Event Handling
 Next Problem Statement:
-Allow users to input and submit new book entries using a form. Use useState to dynamically store and update the list of books on the UI without a page refresh.
-
+Allow users to input and submit new book entries using a form. Use useState to store and update the list of books dynamically on the UI without a page refresh.
