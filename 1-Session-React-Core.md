@@ -39,7 +39,6 @@ You're working on a digital library project. Your task is to display books on th
 
 ## 5. Mini Visual Roadmap
 
-```text
 [ Book Data (title, author) ]
         ↓
     [ Props in React ]
@@ -50,7 +49,7 @@ You're working on a digital library project. Your task is to display books on th
         ↓
   [ Displayed in Web App ]
 
-## 6. Conceptual Explanation
+6. Conceptual Explanation
 ✅ What is React?
 React is a JavaScript library for building reusable UI components. It uses a virtual DOM for fast rendering and follows a component-based structure.
 
@@ -86,88 +85,72 @@ App
  └── BookList
       └── Book
 
-7. Hands-On Implementation
+7. Hands-On Implementation (Integration in Main Project)
 📁 Folder Structure
 
 e-library/
 ├── public/
 ├── src/
-│   ├── App.js
-│   ├── Book.js
-│   ├── BookList.js
-│   └── index.js
+│   ├── App.jsx
+│   └── main.jsx
 
 
-📄 index.js
+📄 main.jsx
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";  // ✅ THIS IS NEEDED
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
 
-📄 App.js
-import React from 'react';
-import BookList from './BookList';
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>  {/* ✅ Wrap App with BrowserRouter */}
+      <App/>
+    </BrowserRouter>
+  </React.StrictMode>
+);
 
-function App() {
+
+📄 App.jsx
+// src/App.jsx
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ManageBook from "./pages/ManageBook";
+import "./App.css";
+
+
+
+const App = () => {
   return (
-    <div>
-      <h1>E-Library Bookstore</h1>
-      <BookList />
+    <div className="container mx-auto p-4">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/add" element={<ManageBook />} />
+        <Route path="/edit/:id" element={<ManageBook />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
 
-📄 BookList.js
-import React from 'react';
-import Book from './Book';
-
-const books = [
-  { id: 1, title: "Clean Code", author: "Robert C. Martin" },
-  { id: 2, title: "The Pragmatic Programmer", author: "Andrew Hunt" },
-];
-
-function BookList() {
-  return (
-    <div>
-      {books.map(book => (
-        <Book key={book.id} title={book.title} author={book.author} />
-      ))}
-    </div>
-  );
-}
-
-export default BookList;
-📄 Book.js
-import React from 'react';
-
-function Book(props) {
-  return (
-    <div style={{ border: "1px solid #ccc", padding: "10px", margin: "10px" }}>
-      <h2>{props.title}</h2>
-      <p>Author: {props.author}</p>
-    </div>
-  );
-}
-
-export default Book;
-
 8. Output-Based Assessment
-✅ Expected Outputs:
+✅ Expected Outputs
 Web page displays book components showing title and author.
 
 Page does not reload on component render.
 
 New book entries added in code reflect dynamically.
 
-📤 GitHub Checkpoint:
+📤 GitHub Checkpoint
 Folder name: 01_react_intro_components
 
-Commit all files and push to GitHub.
+Push all files to GitHub with a proper commit message.
+
+
 
 
 9. Interview Preparation
@@ -178,18 +161,6 @@ JSX is a syntax extension that looks like HTML but is compiled to JavaScript. It
 What is the difference between functional and class components?
 Functional components are simpler and support Hooks; class components use lifecycle methods and this.
 
-Output-Based:
-function Greet(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-
-<Greet name="Alice" />
-
-Why are keys important in React lists?
-Keys help React identify which items have changed, improving rendering performance.
-
-What is the virtual DOM and how does it work?
-The virtual DOM is a lightweight in-memory representation of the real DOM. React uses it to calculate the most efficient way to update the UI.
 
 10. Connection to the Next Problem Statement
 Topic: React State and Event Handling
