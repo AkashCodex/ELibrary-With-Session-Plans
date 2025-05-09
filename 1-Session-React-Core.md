@@ -55,7 +55,6 @@ JSX allows you to write HTML-like syntax directly inside JavaScript files.
 ```jsx
 const element = <h1>Hello React!</h1>;
 
-
 ✅ Components
 Components are reusable pieces of UI in React.
 functional and class components 
