@@ -1,4 +1,10 @@
+Here's the **React Day-1 Training Plan** formatted correctly in Markdown **up to Point 6 only**, with clear indentation and JSX code blocks:
+
+---
+
 # 📘 Day-1 React Training Session: Introduction to React & Components
+
+---
 
 ## 1. Main Project (PBL Context)
 
@@ -10,85 +16,61 @@ You are developing a CRUD-based digital library where users can browse, add, upd
 
 ## 2. Today's Problem Statement (PSBL)
 
-### 🔹 Standard Problem Statement:
+🔹 **Standard Problem Statement:**
 Introduce React fundamentals including components, JSX syntax, rendering, and props. Build a `Book` component to display book information.
 
-### 🔹 User Stories:
-- As a developer, I want to understand React components so I can build a modular UI for my library app.
-- As a user, I want to see a list of books with details like title and author so I can browse them easily.
+🔹 **User Stories:**
+
+* As a developer, I want to understand React components so I can build a modular UI for my library app.
+* As a user, I want to see a list of books with details like title and author so I can browse them easily.
 
 ---
 
 ## 3. Learning Objectives
 
 By the end of this session, learners will be able to:
-- Describe what React is and how it works.
-- Create functional components using JSX.
-- Pass and use props to render data dynamically.
-- Construct a component tree and structure a simple React app.
-- Integrate basic reusable components in a real-world UI.
+
+* Describe what React is and how it works.
+* Create functional components using JSX.
+* Pass and use props to render data dynamically.
+* Construct a component tree and structure a simple React app.
+* Integrate basic reusable components in a real-world UI.
 
 ---
 
 ## 4. Scenario-Based Framing
 
-**Scenario:**  
+**Scenario:**
 You're working on a digital library project. Your task is to display books on the screen in a neat and reusable way. Since each book shares a similar layout, you decide to create a React component called `Book`. This will allow you to dynamically render different books with ease.
+
+---
 
 ## 🗺️ 5. Mini Visual Roadmap
 
-  Book Data (Title, Author)
-        |
-     Props 
-        |
-    <Book />
-        |
-   Rendered on Web Page 
-
-## 📚 6. Conceptual Explanation
-🔹 What is React?
-A JavaScript library for building interactive user interfaces using a component-based architecture and a virtual DOM for efficient updates.
-
-✅ JSX – JavaScript + XML
-JSX allows you to write HTML-like syntax directly inside JavaScript files.
-
-const element = <h1>Hello React!</h1>;
-
-✅ Components
-Components are reusable pieces of UI in React.
-
-Functional Component:
-
-function Welcome() {
-  return <h1>Hello, World!</h1>;
-}
-Class Component:
-class Welcome extends React.Component {
-  render() {
-    return <h1>Hello, World!</h1>;
-  }
-}
-✅ Virtual DOM vs Real DOM
-React uses a virtual DOM, a lightweight copy of the real DOM. It allows React to update only the parts of the page that changed, improving performance.
-
-✅ Component Tree
-React apps are structured in a tree of nested components.
-App
- └── BookList
-      └── Book
-
-Certainly! Here's the corrected **Markdown** formatting to fix the alignment issues in the conceptual explanation and other sections:
+```
+[ Book Data (Title, Author) ]
+        ↓
+[ Props in React ]
+        ↓
+[ Book Component ]
+        ↓
+[ Rendered via JSX ]
+        ↓
+[ Displayed in Web App ]
+```
 
 ---
 
 ## 📚 6. Conceptual Explanation
 
-🔹 **What is React?**
-A JavaScript library for building interactive user interfaces using a component-based architecture and a virtual DOM for efficient updates.
+### 🔹 What is React?
+
+A JavaScript library for building interactive user interfaces using a **component-based architecture** and a **virtual DOM** for efficient updates.
 
 ---
 
-✅ **JSX – JavaScript + XML**
+### ✅ JSX – JavaScript + XML
+
 JSX allows you to write HTML-like syntax directly inside JavaScript files.
 
 ```jsx
@@ -97,10 +79,11 @@ const element = <h1>Hello React!</h1>;
 
 ---
 
-✅ **Components**
-Components are reusable pieces of UI in React.
+### ✅ Components
 
-* **Functional Component:**
+Components are reusable pieces of UI in React. There are two types:
+
+**Functional Component:**
 
 ```jsx
 function Welcome() {
@@ -108,7 +91,7 @@ function Welcome() {
 }
 ```
 
-* **Class Component:**
+**Class Component:**
 
 ```jsx
 class Welcome extends React.Component {
@@ -120,13 +103,28 @@ class Welcome extends React.Component {
 
 ---
 
-✅ **Virtual DOM vs Real DOM**
-React uses a virtual DOM, a lightweight copy of the real DOM. It allows React to update only the parts of the page that changed, improving performance.
+### ✅ Props (Properties)
+
+Props allow you to pass data from a parent component to a child component.
+
+```jsx
+function Book(props) {
+  return <h2>{props.title} by {props.author}</h2>;
+}
+```
 
 ---
 
-✅ **Component Tree**
-React apps are structured in a tree of nested components.
+### ✅ Virtual DOM vs Real DOM
+
+React uses a **virtual DOM**, which is a lightweight copy of the real DOM.
+It enables React to update only the parts of the UI that changed, resulting in faster performance.
+
+---
+
+### ✅ Component Tree
+
+React apps are structured like a tree of components:
 
 ```
 App
