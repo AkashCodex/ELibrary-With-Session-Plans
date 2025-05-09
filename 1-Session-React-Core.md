@@ -35,57 +35,59 @@ By the end of this session, learners will be able to:
 **Scenario:**  
 You're working on a digital library project. Your task is to display books on the screen in a neat and reusable way. Since each book shares a similar layout, you decide to create a React component called `Book`. This will allow you to dynamically render different books with ease.
 
-## 5. Mini Visual Roadmap
-   
-[ Book Data (title, author) ]
-        ↓
-    [ Props in React ]
-        ↓
-    [ <Book /> Component ]
-        ↓
-    [ Rendered via JSX ]
-        ↓
-    [ Displayed in Web App ]
+## 🗺️ 5. Mini Visual Roadmap
 
-## 7. Conceptual Explanation
-✅ What is React?
-React is a JavaScript library for building reusable UI components. It uses a virtual DOM for fast rendering and follows a component-based architecture.
+[ Book Data (Title, Author) ] 
+        |
+     [ Props ]
+        |
+  [ <Book /> Component ]
+        |
+  [ Rendered on Web Page ]
 
+
+## 📚 6. Conceptual Explanation (Notes + Code Walkthrough)
+🔹 What is React?
+A JavaScript library for building interactive user interfaces.
+
+🔹 Key Concepts:
 ✅ JSX – JavaScript + XML
-JSX allows writing HTML-like syntax directly within JavaScript:
+Allows you to write HTML-like syntax directly in JS files.
 
-const greeting = <h1>Hello, world!</h1>;
-✅ Function vs Class Components
+const element = <h1>Hello, React!</h1>;
 
+✅ Components
 Function Component:
 
 function Welcome() {
-  return <h1>Hello!</h1>;
+  return <h1>Hello, World!</h1>;
 }
 
-Class Component:
+Class Component (less used in modern React):
 
 class Welcome extends React.Component {
   render() {
-    return <h1>Hello!</h1>;
+    return <h1>Hello, World!</h1>;
   }
 }
-
 ✅ Props (Properties)
-Props allow you to pass data from one component to another (typically from parent to child):
+Props let you pass data from a parent to a child component.
 
 function Book(props) {
   return <h2>{props.title} by {props.author}</h2>;
 }
-✅ Virtual DOM vs Real DOM
-React maintains a virtual copy of the DOM in memory. When state or props change, React compares the virtual DOM with the real DOM and updates only the parts that changed.
 
-Component Tree:
+✅ Virtual DOM vs Real DOM
+React uses a lightweight copy of the DOM (Virtual DOM) to efficiently update changes without reloading the whole page.
+
+✅ Component Tree
+Your app is a tree of components. For example:
 
 App
  └── BookList
       └── Book
-## 7. Hands-On Implementation (Integration in Main Project)
+
+## 🛠️ 7. Hands-On Implementation (Integration in Main Project)
 📁 Folder Structure
 
 e-library/
@@ -97,41 +99,11 @@ e-library/
 │   │   ├── Home.jsx
 │   │   └── ManageBook.jsx
 │   └── index.css
+
 📄 main.jsx
-
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import { BrowserRouter } from "react-router-dom";
-import "./index.css";
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    {/* ✅ Wrap App with BrowserRouter */}
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
 📄 App.jsx
-
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import ManageBook from "./pages/ManageBook";
-import "./App.css";
-
-const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/add" element={<ManageBook />} />
-      <Route path="/edit/:id" element={<ManageBook />} />
-    </Routes>
-  );
-};
-
-export default App;
+📄 ManageBook.jsx
+📄 Home.jsx
 
 ## 8. Output-Based Assessment
 ✅ Expected Outputs:
@@ -157,23 +129,16 @@ A: JSX is a syntax extension that looks like HTML but compiles to JavaScript. It
 Q: What is the difference between functional and class components?
 A: Functional components are simpler and support hooks. Class components use lifecycle methods and this.
 
-Q: What is the output of this component?
-
 function Greet(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
 <Greet name="Alice" />
-A: The output will be: Hello, Alice
 
-Q: Why are keys important in React lists?
-A: Keys help React efficiently update and manage dynamic lists by identifying which items changed.
-
-Q: What is the virtual DOM and how does it work?
-A: The virtual DOM is a lightweight representation of the actual DOM. React compares it to the real DOM and updates only the parts that have changed.
 
 ## 10. Connection to the Next Problem Statement
 Next Topic: React State and Event Handling
 
 Next Problem Statement:
 Allow users to input and submit new book entries using a form. Use useState to dynamically store and update the list of books on the UI without a page refresh.
+
