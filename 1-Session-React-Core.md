@@ -56,24 +56,16 @@ const element = <h1>Hello React!</h1>;
 
 ✅ Components
 Components are reusable pieces of UI in React.
+functional and class components 
 
 function Welcome() {
   return <h1>Hello, World!</h1>;
 }
 
-Class Component:
-
 class Welcome extends React.Component {
   render() {
     return <h1>Hello, World!</h1>;
   }
-}
-
-✅ Props (Properties)
-Props let you pass data from a parent to a child component.
-
-function Book(props) {
-  return <h2>{props.title} by {props.author}</h2>;
 }
 
 ✅ Virtual DOM vs Real DOM
