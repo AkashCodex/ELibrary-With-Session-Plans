@@ -49,10 +49,12 @@ You're working on a digital library project. Your task is to display books on th
 🔹 What is React?
 A JavaScript library for building interactive user interfaces using a component-based architecture and a virtual DOM for efficient updates.
 
-🔹 Key Concepts
-✅ JSX – JavaScript + XML
+✅ JSX – JavaScript + XML  
 JSX allows you to write HTML-like syntax directly inside JavaScript files.
+
+```jsx
 const element = <h1>Hello React!</h1>;
+
 
 ✅ Components
 Components are reusable pieces of UI in React.
