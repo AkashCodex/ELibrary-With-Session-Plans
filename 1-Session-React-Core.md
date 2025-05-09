@@ -203,3 +203,29 @@ function Greet(props) {
 
 ---
 
+Here’s a suggested **10th point** for your conceptual explanation section in the same style, focusing on **"Props in React"**:
+
+---
+
+### ✅ 10. Props – Passing Data Between Components
+
+Props (short for "properties") allow you to pass data from a parent component to a child component.
+
+#### Example:
+
+```js
+function Welcome(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+
+function App() {
+  return <Welcome name="Alice" />;
+}
+```
+
+📝 `props.name` accesses the value `"Alice"` passed to the `Welcome` component.
+
+---
+
+Would you like the full updated section compiled into a complete Markdown file?
+
