@@ -225,5 +225,5 @@ function App() {
 
 ---
 
-Would you like the full updated section compiled into a complete Markdown file?
+
 
