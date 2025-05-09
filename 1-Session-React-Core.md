@@ -45,14 +45,14 @@ You're working on a digital library project. Your task is to display books on th
         |
    Rendered on Web Page 
 
+
 ## 📚 6. Conceptual Explanation
-🔹 What is React?
+🔹 **What is React?**  
 A JavaScript library for building interactive user interfaces using a component-based architecture and a virtual DOM for efficient updates.
 
 ✅ JSX – JavaScript + XML  
 JSX allows you to write HTML-like syntax directly inside JavaScript files.
 
-```jsx
 const element = <h1>Hello React!</h1>;
 
 ✅ Components
@@ -78,7 +78,6 @@ React apps are structured in a tree of nested components
 App
  └── BookList
       └── Book
-
 
 ## 🛠️ 7. Hands-On Implementation (Integration in Main Project)
 📁 Folder Structure
