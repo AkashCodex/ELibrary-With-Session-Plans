@@ -53,7 +53,6 @@ A JavaScript library for building interactive user interfaces.
 🔹 Key Concepts:
 ✅ JSX – JavaScript + XML
 Allows you to write HTML-like syntax directly in JS files.
-
 const element = <h1>Hello, React!</h1>;
 
 ✅ Components
@@ -63,7 +62,7 @@ function Welcome() {
   return <h1>Hello, World!</h1>;
 }
 
-Class Component (less used in modern React):
+Class Component 
 
 class Welcome extends React.Component {
   render() {
