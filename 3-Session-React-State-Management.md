@@ -1,11 +1,3 @@
-Here is your **Day-1 Coding-Oriented Training Session Plan** following the strict 10-step format and tailored to your **E-Library Project** and **State Management → Introduction to State in React**:
-
----
-
-## ✅ **Day-1: State Management (Introduction to useState and Managing Multiple States)**
-
----
-
 ### 1. **Main Project (PBL Context)**
 
 This session is part of the *E-Library Management System* project, a CRUD-based bookstore app allowing users to manage books. Today’s topic builds the foundation by enabling state management inside components, so book data can be stored, updated, and displayed dynamically — a core requirement for adding/editing functionality.
