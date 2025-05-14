@@ -1,10 +1,3 @@
-### ✅ **Day-1 Session Plan**
-
-**Topic:** Spring Security Setup, User Authentication & Role-Based Access Control
-**Theme:** Secure Access to eLibrary Book Management System
-
----
-
 ### **1. Main Project (PBL Context)**
 
 **Project Title:** *eLibrary Book Management System*
